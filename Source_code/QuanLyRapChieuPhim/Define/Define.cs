@@ -6,5 +6,13 @@
 		eAdministrators,
 		eCashier,
 		eSupervisor,
-	}
+	};
+
+	struct NhanVien
+	{
+		public string strID;
+		public string strName;
+		public string strAdress;
+		/* ... */
+	};
 }
