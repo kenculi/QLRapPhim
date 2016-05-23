@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QuanLyRapChieuPhim.Controller;
 
 namespace QuanLyRapChieuPhim
 {
@@ -56,7 +57,9 @@ namespace QuanLyRapChieuPhim
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (this.txtUsername.Text == "kenvuong" && this.txtPasswd.Text == "123456")
+            loginController loginController = new loginController();
+            int errCode = loginController.Login(this.txtUsername.Text, this.txtPasswd.Text);
+            if (errCode == 1)
                 MessageBox.Show("Đăng nhập thành công!", "Thành công");
             else
                 MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
