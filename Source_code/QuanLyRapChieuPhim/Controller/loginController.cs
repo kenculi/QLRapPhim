@@ -53,10 +53,10 @@ namespace QuanLyRapChieuPhim.Controller
 			MD5 md5Hash = MD5.Create();
 
 			/* Mã hóa password */
-			string hash = GetMd5Hash(md5Hash, strPassword);
+			string strPasswordHash = GetMd5Hash(md5Hash, strPassword);
 
 			/* Kiểm tra tên đăng nhập và mật khẩu */
-			//dbController.dbEmployee.CheckUserLogin(strUserName, strPassword, out nAccessRight)
+			//dbController.dbEmployee.CheckUserLogin(strUserName, strPasswordHash, out nAccessRight)
 
 			/* Nếu có quyền đăng nhập */
 			if (nAccessRight != (int)eACESS_RIGHT.eACESS_DENIED)
