@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using QuanLyRapChieuPhim;
 
 namespace QuanLyRapChieuPhim.Model
 {
@@ -60,21 +61,21 @@ namespace QuanLyRapChieuPhim.Model
 			dbAccessConn.Open();
 
 			/* Tạo câu truy vấn */
-			string strQuery = "Select * from NhanVien nv where nv.StringID = " + strID;
+			string strQuery = "Select * from nhanvien nv where nv.MaNV = " + strID;
 			//string strQuery = "Select * from NhanVien";
 
 			/* Tạo data lưu thông tin sau khi truy vấn */
 			DataSet dbDataSet = new DataSet();
 
 			/* Thực hiện truy vấn */
-			dbAccess(strQuery, "NhanVien", out dbDataSet);
+			dbAccess(strQuery, "nhanvien", out dbDataSet);
 
 			/* Xử lý thông tin lấy từ database */
 			/* Lấy thông tin tên của nhân viên */
 			//DataColumnCollection drc = dbDataSet.Tables["NhanVien"].Columns;
 			//int i = 0;
 
-			DataRowCollection dra = dbDataSet.Tables["NhanVien"].Rows;
+            DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
 			DataRow dr = dra[0]; /* 0 là hàng thứ nhất */
 			strName = (string) dr[0]; /* Tên nhân viên là cột thứ 5 */
 
@@ -118,41 +119,59 @@ namespace QuanLyRapChieuPhim.Model
 		 *	History:
 		 *		2016/05/21	SonDTT		Khởi tạo
 		 * ========================================================== */
-		public void getEmployee(out NhanVien []tNhanVien)
+		public void getEmployee(string condition, out NhanVien []tNhanVien)
 		{
 			/* Truy cập database */
 			dbAccessConn.Open();
 
 			/* Tạo câu truy vấn */
-			string strQuery = "Select * from NhanVien";
+            string strQuery = "Select * from nhanvien " + condition;
 
 			/* Tạo data lưu thông tin sau khi truy vấn */
 			DataSet dbDataSet = new DataSet();
 
 			/* Thực hiện truy vấn */
-			dbAccess(strQuery, "NhanVien", out dbDataSet);
+            dbAccess(strQuery, "nhanvien", out dbDataSet);
 
 			/* Xử lý thông tin lấy từ database */
-			/* Lấy thông tin tên của nhân viên */
-			//DataColumnCollection drc = dbDataSet.Tables["NhanVien"].Columns;
 			tNhanVien = new NhanVien[100];
 			int i = 0;
-			DataRowCollection dra = dbDataSet.Tables["NhanVien"].Rows;
+            DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
 			foreach (DataRow dr in dra)
 			{
-				tNhanVien[i].strName = (string) dr[0];
-				tNhanVien[i].strID = (string)dr[1];
-				tNhanVien[i].strName = (string)dr[2];
+                tNhanVien[i].employeeID = (int)dr[0];
+                tNhanVien[i].username = (string)dr[1];
+                tNhanVien[i].passwd = (string)dr[2];
+                tNhanVien[i].positionID = (int)dr[3];
+                tNhanVien[i].fullname = (string)dr[4];
+                tNhanVien[i].birthday = (string)dr[5];
+                tNhanVien[i].address = (string)dr[6];
+                tNhanVien[i].email = (string)dr[7];
+                tNhanVien[i].gender = (int)dr[8];
+                i++;
 			}
-
-
-			
-			
-			//DataRow dr = dra[0]; /* 0 là hàng thứ nhất */
-			//strName = (string)dr[0]; /* Tên nhân viên là cột thứ 5 */
 
 			/* Đóng kết nối database */
 			dbAccessConn.Close();
 		}
+
+        public void checkUserLogin(string strUserName, string strPasswordHash, out int nError, out int nAccessRight)
+        {
+            nError = (int)eLOGIN_ERROR.eERROR_NOK;
+            nAccessRight = (int)eACESS_RIGHT.eACESS_DENIED;
+            NhanVien []tNhanVien;
+            string condition = "";
+            this.getEmployee(condition, out tNhanVien);
+            string passInDB = tNhanVien[0].passwd;
+            if (passInDB == strPasswordHash)
+            {
+                nError = (int)eLOGIN_ERROR.eERROR_OK;
+                nAccessRight = (int)tNhanVien[0].positionID;
+            }
+            else
+            {
+                nError = (int)eLOGIN_ERROR.eERROR_NOK;
+            }
+        }
 	}
 }

@@ -1,4 +1,5 @@
-﻿namespace QuanLyRapChieuPhim
+﻿using System;
+namespace QuanLyRapChieuPhim
 {
 	/* Quyền đăng nhập trong hệ thống */
 	enum eACESS_RIGHT
@@ -19,9 +20,19 @@
 
 	struct NhanVien
 	{
-		public string strID;
-		public string strName;
-		public string strAdress;
-		/* ... */
+        /* Thông tin cơ bản */
+		public int employeeID;
+		public string username;
+		public string passwd;
+        public int positionID;
+
+        /* Thông tin chi tiết */
+        public string fullname;
+        public string birthday;
+        public string address;
+        public string email;
+        public int gender;
 	};
+
+
 }

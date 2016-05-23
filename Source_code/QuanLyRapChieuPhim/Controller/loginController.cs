@@ -43,8 +43,8 @@ namespace QuanLyRapChieuPhim.Controller
 		public int Login(string strUserName, string strPassword)
 		{
 			/* Tạo mã lổi */
-			int nError = (int)eLOGIN_ERROR.eERROR_NOK;
-			int nAccessRight = (int)eACESS_RIGHT.eACESS_DENIED;
+			int nError;
+			int nAccessRight;
 
 			/* Tạo controller của database */
 			CdbController dbController = new CdbController();
@@ -56,14 +56,11 @@ namespace QuanLyRapChieuPhim.Controller
 			string strPasswordHash = GetMd5Hash(md5Hash, strPassword);
 
 			/* Kiểm tra tên đăng nhập và mật khẩu */
-			//dbController.dbEmployee.CheckUserLogin(strUserName, strPasswordHash, out nAccessRight)
+            dbController.dbEmployee.checkUserLogin(strUserName, strPasswordHash, out nError, out nAccessRight);
 
-			/* Nếu có quyền đăng nhập */
-			if (nAccessRight != (int)eACESS_RIGHT.eACESS_DENIED)
+            /* Đăng nhập thành công */
+            if (nAccessRight != (int)eACESS_RIGHT.eACESS_DENIED && nError == (int)eLOGIN_ERROR.eERROR_OK)
 			{
-				/* Đăng nhập thành công */
-				nError = (int)eLOGIN_ERROR.eERROR_OK;
-
 				/* Lấy vùng dữ liệu common data */
 				CCommonData CommonData = CCommonData.Instance();
 
