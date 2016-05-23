@@ -46,14 +46,21 @@ namespace QuanLyRapChieuPhim
 
 		}
 
-		private void groupBox1_Enter(object sender, EventArgs e)
-		{
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (result == DialogResult.Yes)
+                Application.Exit();
+        }
 
-		}
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-		}
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (this.txtUsername.Text == "kenvuong" && this.txtPasswd.Text == "123456")
+                MessageBox.Show("Đăng nhập thành công!", "Thành công");
+            else
+                MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.txtUsername.Focus();
+        }
 	}
 }
