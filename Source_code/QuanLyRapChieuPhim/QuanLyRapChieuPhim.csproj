@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\dbController.cs" />
+    <Compile Include="Controller\loginController.cs" />
     <Compile Include="Define\Define.cs" />
     <Compile Include="Model\CommonData.cs" />
     <Compile Include="Model\dbEmployee.cs" />

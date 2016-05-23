@@ -21,6 +21,10 @@ namespace QuanLyRapChieuPhim.Model
 		private static volatile CCommonData instance;
 		private static object syncRoot = new Object();
 
+		/* Thông tin người đăng nhập */
+		public string strUserName;
+		public int nAcessRight;
+
 		/* ==========================================================
 		 *	Function name: 
 		 *		CCommonData
@@ -38,6 +42,8 @@ namespace QuanLyRapChieuPhim.Model
 		 * ========================================================== */
 		private CCommonData()
 		{
+			strUserName = null;
+			nAcessRight = (int) eACESS_RIGHT.eACESS_DENIED;
 		}
 
 		/* =========================================================
@@ -55,22 +61,19 @@ namespace QuanLyRapChieuPhim.Model
 		 *	History:
 		 *		2016/05/21	SonDTT		Khởi tạo
 		 * ========================================================== */
-		public static CCommonData Instance
+		public static CCommonData Instance()
 		{
-			get
+			if (instance == null)
 			{
-				if (instance == null)
+				lock (syncRoot)
 				{
-					lock (syncRoot)
+					if (instance == null)
 					{
-						if (instance == null)
-						{
-							instance = new CCommonData();
-						}
+						instance = new CCommonData();
 					}
 				}
-				return instance;
 			}
+			return instance;
 		}
 	}
 }

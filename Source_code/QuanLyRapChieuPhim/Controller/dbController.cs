@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using QuanLyRapChieuPhim.Model;
 
 namespace QuanLyRapChieuPhim.Class
 {
@@ -17,6 +18,11 @@ namespace QuanLyRapChieuPhim.Class
 	 * ========================================================== */
 	class CdbController
 	{
+		public CdbEmployee dbEmployee;
 
+		public CdbController()
+		{
+			dbEmployee = new CdbEmployee();
+		}
 	}
 }
