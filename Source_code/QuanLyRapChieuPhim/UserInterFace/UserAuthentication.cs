@@ -57,10 +57,15 @@ namespace QuanLyRapChieuPhim
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            CHomeLauncher frmHomeLauncher = new CHomeLauncher();
             loginController loginController = new loginController();
             int errCode = loginController.Login(this.txtUsername.Text, this.txtPasswd.Text);
             if (errCode == 1)
+            {
                 MessageBox.Show("Đăng nhập thành công!", "Thành công");
+
+                frmHomeLauncher.ShowDialog();
+            }
             else
                 MessageBox.Show("Sai thông tin đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.txtUsername.Focus();
