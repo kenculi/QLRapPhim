@@ -57,9 +57,6 @@ namespace QuanLyRapChieuPhim.Model
          * ========================================================== */
         public void getEmployeeName(string strID, out string strName)
         {
-            /* Truy cập database */
-            dbAccessConn.Open();
-
             /* Tạo câu truy vấn */
             string strQuery = "Select * from nhanvien nv where nv.MaNV = " + strID;
             //string strQuery = "Select * from NhanVien";
@@ -78,9 +75,6 @@ namespace QuanLyRapChieuPhim.Model
             DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
             DataRow dr = dra[0]; /* 0 là hàng thứ nhất */
             strName = (string)dr[0]; /* Tên nhân viên là cột thứ 5 */
-
-            /* Đóng kết nối database */
-            dbAccessConn.Close();
         }
 
         /* ==========================================================
@@ -121,14 +115,11 @@ namespace QuanLyRapChieuPhim.Model
          * ========================================================== */
         public void getEmployee(string condition, out NhanVien[] tNhanVien)
         {
-            /* Truy cập database */
-            dbAccessConn.Open();
-
             /* Tạo câu truy vấn */
             string strQuery = "Select * from nhanvien " + condition;
 
             /* Tạo data lưu thông tin sau khi truy vấn */
-            DataSet dbDataSet = new DataSet();
+            DataSet dbDataSet;
 
             /* Thực hiện truy vấn */
             dbAccess(strQuery, "nhanvien", out dbDataSet);
@@ -142,17 +133,14 @@ namespace QuanLyRapChieuPhim.Model
                 tNhanVien[i].employeeID = (int)dr[0];
                 tNhanVien[i].username = (string)dr[1];
                 tNhanVien[i].passwd = (string)dr[2];
-                tNhanVien[i].positionID = (int)dr[3];
-                tNhanVien[i].fullname = (string)dr[4];
-                tNhanVien[i].birthday = (string)dr[5];
-                tNhanVien[i].address = (string)dr[6];
-                tNhanVien[i].email = (string)dr[7];
-                tNhanVien[i].gender = (int)dr[8];
+                tNhanVien[i].fullname = (string)dr[3];
+				tNhanVien[i].birthday = (DateTime)dr[4];
+                tNhanVien[i].address = (string)dr[5];
+                tNhanVien[i].email = (string)dr[6];
+                tNhanVien[i].gender = (int)dr[7];
+				tNhanVien[i].positionID = (int)dr[8];
                 i++;
             }
-
-            /* Đóng kết nối database */
-            dbAccessConn.Close();
         }
 
         public void checkUserLogin(string strUserName, string strPasswordHash, out int nError, out int nAccessRight)
