@@ -39,7 +39,8 @@ namespace QuanLyRapChieuPhim
 		public CHomeLauncher()
 		{
 			InitializeComponent();
-
+            CUserAuthentication frmUserAuth = new CUserAuthentication();
+            frmUserAuth.Close();
 			/* Canh vị trí vào giữa màn hình */
 			this.CenterToScreen();
             //this.WindowState = FormWindowState.Maximized;

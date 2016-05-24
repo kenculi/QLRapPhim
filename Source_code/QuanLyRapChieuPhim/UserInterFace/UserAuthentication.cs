@@ -63,7 +63,7 @@ namespace QuanLyRapChieuPhim
             if (errCode == 1)
             {
                 MessageBox.Show("Đăng nhập thành công!", "Thành công");
-
+                this.Close(); this.Dispose();
                 frmHomeLauncher.ShowDialog();
             }
             else
