@@ -42,6 +42,20 @@ namespace QuanLyRapChieuPhim
 
 			/* Canh vị trí vào giữa màn hình */
 			this.CenterToScreen();
+            //this.WindowState = FormWindowState.Maximized;
 		}
+
+        private void CHomeLauncher_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataDataSet.lichchieu' table. You can move, or remove it, as needed.
+            this.lichchieuTableAdapter.Fill(this.dataDataSet.lichchieu);
+            // TODO: This line of code loads data into the 'dataDataSet.phim' table. You can move, or remove it, as needed.
+            this.phimTableAdapter.Fill(this.dataDataSet.phim);
+            // TODO: This line of code loads data into the 'dataDataSet.phong' table. You can move, or remove it, as needed.
+            this.phongTableAdapter.Fill(this.dataDataSet.phong);
+            // TODO: This line of code loads data into the 'dataDataSet.nhanvien' table. You can move, or remove it, as needed.
+            this.nhanvienTableAdapter.Fill(this.dataDataSet.nhanvien);
+
+        }
 	}
 }
