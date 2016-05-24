@@ -40,7 +40,7 @@ namespace QuanLyRapChieuPhim.Model
 		 * ========================================================== */
 		public CdbQuery()
 		{
-			strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\Data\\Data.mdb";
+			strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\Data\\data.mdb";
 			dbAccessConn = null;
 		}
 
