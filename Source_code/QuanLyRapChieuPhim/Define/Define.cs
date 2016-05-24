@@ -28,7 +28,7 @@ namespace QuanLyRapChieuPhim
 
         /* Thông tin chi tiết */
         public string fullname;
-        public string birthday;
+        public DateTime birthday;
         public string address;
         public string email;
         public int gender;

@@ -92,26 +92,20 @@ namespace QuanLyRapChieuPhim.Model
 		protected void dbAccess(string strQuery, string strTableName, out DataSet dbDataSet)
 		{
 			/* Initial */
-			dbDataSet = null;
+			dbDataSet = new DataSet();
 
 			/* Create the dataset and add the Categories table to it: */
-			try
-			{
-				OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
-				OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
+			OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
+			OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
 
-				dbAccessConn.Open();
-				dbDataAdapter.Fill(dbDataSet, strTableName);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Error: Failed to retrieve the required data from the DataBase.\n{0}", ex.Message);
-				return;
-			}
-			finally
-			{
-				dbAccessConn.Close();
-			}
+			/* Mở database */
+			dbAccessConn.Open();
+
+			/* Lấy thông tin */
+			dbDataAdapter.Fill(dbDataSet, strTableName);
+
+			/* Đóng database */
+			dbAccessConn.Close();
 		}
 	}
 }
