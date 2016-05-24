@@ -148,7 +148,7 @@ namespace QuanLyRapChieuPhim.Model
             nError = (int)eLOGIN_ERROR.eERROR_NOK;
             nAccessRight = (int)eACESS_RIGHT.eACESS_DENIED;
             NhanVien[] tNhanVien;
-            string condition = "";
+            string condition = "where UserName = '" + strUserName + "'";
             this.getEmployee(condition, out tNhanVien);
             string passInDB = tNhanVien[0].passwd;
             if (passInDB == strPasswordHash)
