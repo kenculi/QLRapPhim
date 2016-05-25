@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QuanLyRapChieuPhim.UserInterFace;
 
 namespace QuanLyRapChieuPhim
 {
@@ -57,6 +58,24 @@ namespace QuanLyRapChieuPhim
             // TODO: This line of code loads data into the 'dataDataSet.nhanvien' table. You can move, or remove it, as needed.
             this.nhanvienTableAdapter.Fill(this.dataDataSet.nhanvien);
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmp = new AddEmployee();
+            addEmp.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddFilm film = new AddFilm();
+            film.ShowDialog();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            AddGenreMovie genreMovie = new AddGenreMovie();
+            genreMovie.ShowDialog();
         }
 	}
 }

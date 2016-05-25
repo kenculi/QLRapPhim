@@ -53,10 +53,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Define\Define.cs" />
     <Compile Include="Model\CommonData.cs" />
     <Compile Include="Model\dbEmployee.cs" />
     <Compile Include="Model\dbQuery.cs" />
+    <Compile Include="UserInterFace\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterFace\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterFace\AddFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterFace\AddFilm.Designer.cs">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterFace\AddGenreMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterFace\AddGenreMovie.Designer.cs">
+      <DependentUpon>AddGenreMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterFace\HomeLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +104,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserInterFace\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterFace\AddFilm.resx">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterFace\AddGenreMovie.resx">
+      <DependentUpon>AddGenreMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterFace\HomeLauncher.resx">
       <DependentUpon>HomeLauncher.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +130,17 @@
     </None>
     <None Include="dataDataSet.xss">
       <DependentUpon>dataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataDataSet1.xsc">
+      <DependentUpon>dataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataDataSet1.xss">
+      <DependentUpon>dataDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

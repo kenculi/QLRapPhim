@@ -20,9 +20,9 @@ namespace QuanLyRapChieuPhim {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dataDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dataDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dataDataSet : global::System.Data.DataSet {
+    public partial class dataDataSet1 : global::System.Data.DataSet {
         
         private capthanhvienDataTable tablecapthanhvien;
         
@@ -56,7 +56,7 @@ namespace QuanLyRapChieuPhim {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dataDataSet() {
+        public dataDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -67,7 +67,7 @@ namespace QuanLyRapChieuPhim {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dataDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dataDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -322,7 +322,7 @@ namespace QuanLyRapChieuPhim {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dataDataSet cln = ((dataDataSet)(base.Clone()));
+            dataDataSet1 cln = ((dataDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -511,9 +511,9 @@ namespace QuanLyRapChieuPhim {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dataDataSet";
+            this.DataSetName = "dataDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dataDataSet.xsd";
+            this.Namespace = "http://tempuri.org/dataDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablecapthanhvien = new capthanhvienDataTable();
@@ -641,7 +641,7 @@ namespace QuanLyRapChieuPhim {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dataDataSet ds = new dataDataSet();
+            dataDataSet1 ds = new dataDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -944,7 +944,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1221,7 +1221,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1483,7 +1483,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1772,7 +1772,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2075,7 +2075,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2438,7 +2438,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2741,7 +2741,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3017,7 +3017,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3381,7 +3381,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3772,7 +3772,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4105,7 +4105,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4367,7 +4367,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4629,7 +4629,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4960,7 +4960,7 @@ namespace QuanLyRapChieuPhim {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dataDataSet ds = new dataDataSet();
+                dataDataSet1 ds = new dataDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -7722,7 +7722,7 @@ namespace QuanLyRapChieuPhim {
         }
     }
 }
-namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
+namespace QuanLyRapChieuPhim.dataDataSet1TableAdapters {
     
     
     /// <summary>
@@ -7880,7 +7880,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.capthanhvienDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.capthanhvienDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7893,9 +7893,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.capthanhvienDataTable GetData() {
+        public virtual dataDataSet1.capthanhvienDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.capthanhvienDataTable dataTable = new dataDataSet.capthanhvienDataTable();
+            dataDataSet1.capthanhvienDataTable dataTable = new dataDataSet1.capthanhvienDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7903,14 +7903,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.capthanhvienDataTable dataTable) {
+        public virtual int Update(dataDataSet1.capthanhvienDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "capthanhvien");
         }
         
@@ -8124,7 +8124,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.cumrapDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.cumrapDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8137,9 +8137,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.cumrapDataTable GetData() {
+        public virtual dataDataSet1.cumrapDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.cumrapDataTable dataTable = new dataDataSet.cumrapDataTable();
+            dataDataSet1.cumrapDataTable dataTable = new dataDataSet1.cumrapDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8147,14 +8147,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.cumrapDataTable dataTable) {
+        public virtual int Update(dataDataSet1.cumrapDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "cumrap");
         }
         
@@ -8366,7 +8366,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.chucvuDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.chucvuDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8379,9 +8379,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.chucvuDataTable GetData() {
+        public virtual dataDataSet1.chucvuDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.chucvuDataTable dataTable = new dataDataSet.chucvuDataTable();
+            dataDataSet1.chucvuDataTable dataTable = new dataDataSet1.chucvuDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8389,14 +8389,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.chucvuDataTable dataTable) {
+        public virtual int Update(dataDataSet1.chucvuDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "chucvu");
         }
         
@@ -8607,7 +8607,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.gheDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.gheDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8620,9 +8620,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.gheDataTable GetData() {
+        public virtual dataDataSet1.gheDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.gheDataTable dataTable = new dataDataSet.gheDataTable();
+            dataDataSet1.gheDataTable dataTable = new dataDataSet1.gheDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8630,14 +8630,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.gheDataTable dataTable) {
+        public virtual int Update(dataDataSet1.gheDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "ghe");
         }
         
@@ -8862,7 +8862,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.hoadonDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.hoadonDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8875,9 +8875,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.hoadonDataTable GetData() {
+        public virtual dataDataSet1.hoadonDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.hoadonDataTable dataTable = new dataDataSet.hoadonDataTable();
+            dataDataSet1.hoadonDataTable dataTable = new dataDataSet1.hoadonDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8885,14 +8885,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.hoadonDataTable dataTable) {
+        public virtual int Update(dataDataSet1.hoadonDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "hoadon");
         }
         
@@ -9133,7 +9133,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.khachhangDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.khachhangDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9146,9 +9146,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.khachhangDataTable GetData() {
+        public virtual dataDataSet1.khachhangDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.khachhangDataTable dataTable = new dataDataSet.khachhangDataTable();
+            dataDataSet1.khachhangDataTable dataTable = new dataDataSet1.khachhangDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9156,14 +9156,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.khachhangDataTable dataTable) {
+        public virtual int Update(dataDataSet1.khachhangDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "khachhang");
         }
         
@@ -9418,7 +9418,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.lichchieuDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.lichchieuDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9431,9 +9431,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.lichchieuDataTable GetData() {
+        public virtual dataDataSet1.lichchieuDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.lichchieuDataTable dataTable = new dataDataSet.lichchieuDataTable();
+            dataDataSet1.lichchieuDataTable dataTable = new dataDataSet1.lichchieuDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9441,14 +9441,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.lichchieuDataTable dataTable) {
+        public virtual int Update(dataDataSet1.lichchieuDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "lichchieu");
         }
         
@@ -9674,7 +9674,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.loaigheDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.loaigheDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9687,9 +9687,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.loaigheDataTable GetData() {
+        public virtual dataDataSet1.loaigheDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.loaigheDataTable dataTable = new dataDataSet.loaigheDataTable();
+            dataDataSet1.loaigheDataTable dataTable = new dataDataSet1.loaigheDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9697,14 +9697,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.loaigheDataTable dataTable) {
+        public virtual int Update(dataDataSet1.loaigheDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "loaighe");
         }
         
@@ -9932,7 +9932,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.nhanvienDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.nhanvienDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9945,9 +9945,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.nhanvienDataTable GetData() {
+        public virtual dataDataSet1.nhanvienDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.nhanvienDataTable dataTable = new dataDataSet.nhanvienDataTable();
+            dataDataSet1.nhanvienDataTable dataTable = new dataDataSet1.nhanvienDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9955,14 +9955,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.nhanvienDataTable dataTable) {
+        public virtual int Update(dataDataSet1.nhanvienDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "nhanvien");
         }
         
@@ -10231,7 +10231,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.phimDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.phimDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10244,9 +10244,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.phimDataTable GetData() {
+        public virtual dataDataSet1.phimDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.phimDataTable dataTable = new dataDataSet.phimDataTable();
+            dataDataSet1.phimDataTable dataTable = new dataDataSet1.phimDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10254,14 +10254,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.phimDataTable dataTable) {
+        public virtual int Update(dataDataSet1.phimDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "phim");
         }
         
@@ -10533,7 +10533,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.phongDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.phongDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10546,9 +10546,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.phongDataTable GetData() {
+        public virtual dataDataSet1.phongDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.phongDataTable dataTable = new dataDataSet.phongDataTable();
+            dataDataSet1.phongDataTable dataTable = new dataDataSet1.phongDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10556,14 +10556,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.phongDataTable dataTable) {
+        public virtual int Update(dataDataSet1.phongDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "phong");
         }
         
@@ -10799,7 +10799,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.quocgiaDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.quocgiaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10812,9 +10812,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.quocgiaDataTable GetData() {
+        public virtual dataDataSet1.quocgiaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.quocgiaDataTable dataTable = new dataDataSet.quocgiaDataTable();
+            dataDataSet1.quocgiaDataTable dataTable = new dataDataSet1.quocgiaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10822,14 +10822,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.quocgiaDataTable dataTable) {
+        public virtual int Update(dataDataSet1.quocgiaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "quocgia");
         }
         
@@ -11024,22 +11024,18 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT MaTheLoai, TenTheLoai FROM theloaiphim";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT MaTheLoai, TenTheLoai FROM theloaiphim";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.theloaiphimDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.theloaiphimDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11052,9 +11048,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.theloaiphimDataTable GetData() {
+        public virtual dataDataSet1.theloaiphimDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.theloaiphimDataTable dataTable = new dataDataSet.theloaiphimDataTable();
+            dataDataSet1.theloaiphimDataTable dataTable = new dataDataSet1.theloaiphimDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11062,27 +11058,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(dataDataSet.theloaiphimDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.theloaiphimDataTable dataTable) {
+        public virtual int Update(dataDataSet1.theloaiphimDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "theloaiphim");
         }
         
@@ -11299,7 +11282,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dataDataSet.vephimDataTable dataTable) {
+        public virtual int Fill(dataDataSet1.vephimDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11312,9 +11295,9 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dataDataSet.vephimDataTable GetData() {
+        public virtual dataDataSet1.vephimDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataDataSet.vephimDataTable dataTable = new dataDataSet.vephimDataTable();
+            dataDataSet1.vephimDataTable dataTable = new dataDataSet1.vephimDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11322,14 +11305,14 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet.vephimDataTable dataTable) {
+        public virtual int Update(dataDataSet1.vephimDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dataDataSet dataSet) {
+        public virtual int Update(dataDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "vephim");
         }
         
@@ -11802,7 +11785,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(dataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._capthanhvienTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.capthanhvien.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -11938,7 +11921,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(dataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._capthanhvienTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.capthanhvien.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -12060,7 +12043,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(dataDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._vephimTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.vephim.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -12206,7 +12189,7 @@ namespace QuanLyRapChieuPhim.dataDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(dataDataSet dataSet) {
+        public virtual int UpdateAll(dataDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
