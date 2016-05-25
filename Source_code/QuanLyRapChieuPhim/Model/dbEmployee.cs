@@ -64,6 +64,27 @@ namespace QuanLyRapChieuPhim.Model
 
         /* ==========================================================
          *	Function name: 
+         *		updateEmployee
+         *	Description:
+         *		Sửa thông tin một nhân viên
+         *	Parameter:
+         *		[Input]
+         *		    NhanVien tNhanVien
+         *		[Output]
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void updateEmployee(NhanVien tNhanVien)
+        {
+            DataSet dbDataSet;
+            string strQuery = "UPDATE nhanvien SET MaNV=" + tNhanVien.employeeID + ",UserName=" + tNhanVien.username + ",Password=" + tNhanVien.passwd + ",HoTen=" + tNhanVien.fullname + ",NgaySinh=" + tNhanVien.birthday + ",DiaChi=" + tNhanVien.address + ",Email=" + tNhanVien.email + ",GioiTinh=" + tNhanVien.gender + ",MaChucVu=" + tNhanVien.positionID +" WHERE MaNV = "+tNhanVien.employeeID;
+            dbAccess(strQuery, "nhanvien", out dbDataSet);
+        }
+        /* ==========================================================
+         *	Function name: 
          *		getallEmployee
          *	Description:
          *		Lấy toàn bộ thông tin nhân viên
@@ -112,7 +133,7 @@ namespace QuanLyRapChieuPhim.Model
         public void getEmployee(string condition, out NhanVien[] tNhanVien)
         {
             /* Tạo câu truy vấn */
-            string strQuery = "Select * from nhanvien" + condition;
+            string strQuery = "Select * from nhanvien " + condition;
 
             /* Tạo data lưu thông tin sau khi truy vấn */
             DataSet dbDataSet;

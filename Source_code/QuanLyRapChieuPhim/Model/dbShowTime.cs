@@ -101,5 +101,26 @@ namespace QuanLyRapChieuPhim.Model
             string strQuery = "INSERT INTO phim VALUES(" + tLichChieu.MovieShowtimesID + "," + tLichChieu.MovieID + "," + tLichChieu.CinemaRoomID + "," + tLichChieu.MovieShowtimes +")";
             dbAccess(strQuery, "lichchieu", out dbDataSet);
         }
+        /* ==========================================================
+         *	Function name: 
+         *		updateShowTime
+         *	Description:
+         *		Sửa thông tin một lịch chiếu
+         *	Parameter:
+         *		[Input]
+         *		    LichChieu tLichChieu
+         *		[Output]
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void updateShowTime(LichChieu tLichChieu)
+        {
+            DataSet dbDataSet;
+            string strQuery = "UPDATE lichchieu GET MaLichChieu=" + tLichChieu.MovieShowtimesID + ",MaPhim=" + tLichChieu.MovieID + ",MaPhong=" + tLichChieu.CinemaRoomID + ",ThoiGianChieu=" + tLichChieu.MovieShowtimes + " WHERE MaLichChieu = " + tLichChieu.MovieShowtimesID;
+            dbAccess(strQuery, "lichchieu", out dbDataSet);
+        }
     }
 }

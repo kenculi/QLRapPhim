@@ -108,5 +108,26 @@ namespace QuanLyRapChieuPhim.Model
             string strQuery = "INSERT INTO phim VALUES("+tPhim.MovieID+","+tPhim.MovieName+","+tPhim.MovieGenres+","+tPhim.MovieLen+","+tPhim.MovieNation+","+tPhim.MovieStartDay+","+tPhim.MovieFinishDay+","+tPhim.MovieAvatar+","+tPhim.MovieActor+","+tPhim.Moviecontent+","+tPhim.MovieStatus+")";
             dbAccess(strQuery, "phim",out dbDataSet);
         }
+        /* ==========================================================
+         *	Function name: 
+         *		updateMovie
+         *	Description:
+         *		Sửa thông tin một phim
+         *	Parameter:
+         *		[Input]
+         *		    Phim tPhim
+         *		[Output]
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void updateMovie(Phim tPhim)
+        {
+            DataSet dbDataSet;
+            string strQuery = "UPDATE phim GET MaPhim=" + tPhim.MovieID + ",TenPhim=" + tPhim.MovieName + ",MaTheLoai=" + tPhim.MovieGenres + ",DoDai=" + tPhim.MovieLen + ",MaQuocGia=" + tPhim.MovieNation + ",NgayBatDau=" + tPhim.MovieStartDay + ",NgayKetThuc=" + tPhim.MovieFinishDay + ",AnhDaiDien=" + tPhim.MovieAvatar + ",DienVien=" + tPhim.MovieActor + ",MoTa=" + tPhim.Moviecontent + ",TrangThai=" + tPhim.MovieStatus + " WHERE MaPhim = " + tPhim.MovieID;
+            dbAccess(strQuery, "phim", out dbDataSet);
+        }
     }
 }

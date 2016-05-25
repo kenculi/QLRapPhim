@@ -100,7 +100,28 @@ namespace QuanLyRapChieuPhim.Model
         public void addCinemaRoom(PhongChieu tPhongChieu)
         {
             DataSet dbDataSet;
-            string strQuery = "INSERT INTO nhanvien VALUES(" + tPhongChieu.CinemaRoomID + "," + tPhongChieu.CinemaRoomName + "," + tPhongChieu.CinemaRoomStt + "," + tPhongChieu.SLDayGhe + "," + tPhongChieu.SLGheMoiDay + "," + tPhongChieu.Note +")";
+            string strQuery = "INSERT INTO phong VALUES(" + tPhongChieu.CinemaRoomID + "," + tPhongChieu.CinemaRoomName + "," + tPhongChieu.CinemaRoomStt + "," + tPhongChieu.SLDayGhe + "," + tPhongChieu.SLGheMoiDay + "," + tPhongChieu.Note +")";
+            dbAccess(strQuery, "phong", out dbDataSet);
+        }
+        /* ==========================================================
+         *	Function name: 
+         *		updateCinemaRoom
+         *	Description:
+         *		Sửa thông tin một phòng chiếu
+         *	Parameter:
+         *		[Input]
+         *		    PhongChieu tPhongChieu
+         *		[Output]
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void updateCinemaRoom(PhongChieu tPhongChieu)
+        {
+            DataSet dbDataSet;
+            string strQuery = "UPDATE phong SET MaPhong=" + tPhongChieu.CinemaRoomID + ",TenPhong=" + tPhongChieu.CinemaRoomName + ",TrangThai" + tPhongChieu.CinemaRoomStt + ",SLuongDayGhe=" + tPhongChieu.SLDayGhe + ",SLuongGheMoiDay=" + tPhongChieu.SLGheMoiDay + ",GhiChu=" + tPhongChieu.Note + " WHERE MaPhong = "+ tPhongChieu.CinemaRoomID;
             dbAccess(strQuery, "phong", out dbDataSet);
         }
     }
