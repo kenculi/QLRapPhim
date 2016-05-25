@@ -59,6 +59,11 @@
       <DependentUpon>dataDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Define\Define.cs" />
+    <Compile Include="mainDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mainDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\CinemaRoom.cs" />
     <Compile Include="Model\CommonData.cs" />
     <Compile Include="Model\dbEmployee.cs" />
@@ -123,6 +128,7 @@
       <DependentUpon>UserAuthentication.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="dataDataSet.xsc">
       <DependentUpon>dataDataSet.xsd</DependentUpon>
     </None>
@@ -144,6 +150,17 @@
     </None>
     <None Include="dataDataSet1.xss">
       <DependentUpon>dataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mainDataset.xsc">
+      <DependentUpon>mainDataset.xsd</DependentUpon>
+    </None>
+    <None Include="mainDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mainDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mainDataset.xss">
+      <DependentUpon>mainDataset.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

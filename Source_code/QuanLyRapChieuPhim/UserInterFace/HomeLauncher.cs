@@ -49,6 +49,14 @@ namespace QuanLyRapChieuPhim
 
         private void CHomeLauncher_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mainDataset.lichchieu' table. You can move, or remove it, as needed.
+            this.lichchieuTableAdapter1.Fill(this.mainDataset.lichchieu);
+            // TODO: This line of code loads data into the 'mainDataset.phim' table. You can move, or remove it, as needed.
+            this.phimTableAdapter1.Fill(this.mainDataset.phim);
+            // TODO: This line of code loads data into the 'mainDataset.phong' table. You can move, or remove it, as needed.
+            this.phongTableAdapter1.Fill(this.mainDataset.phong);
+            // TODO: This line of code loads data into the 'mainDataset.nhanvien' table. You can move, or remove it, as needed.
+            this.nhanvienTableAdapter1.Fill(this.mainDataset.nhanvien);
             // TODO: This line of code loads data into the 'dataDataSet.lichchieu' table. You can move, or remove it, as needed.
             this.lichchieuTableAdapter.Fill(this.dataDataSet.lichchieu);
             // TODO: This line of code loads data into the 'dataDataSet.phim' table. You can move, or remove it, as needed.
