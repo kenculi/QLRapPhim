@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEmployee));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,18 @@
             this.slbGender = new System.Windows.Forms.ComboBox();
             this.slbLevel = new System.Windows.Forms.ComboBox();
             this.btnAddEmp = new System.Windows.Forms.Button();
+            this.dataDataSet1 = new QuanLyRapChieuPhim.dataDataSet1();
+            this.chucvuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chucvuTableAdapter = new QuanLyRapChieuPhim.dataDataSet1TableAdapters.chucvuTableAdapter();
+            this.dataDataSet = new QuanLyRapChieuPhim.dataDataSet();
+            this.dataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -201,6 +213,9 @@
             // slbGender
             // 
             this.slbGender.FormattingEnabled = true;
+            this.slbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.slbGender.Location = new System.Drawing.Point(208, 314);
             this.slbGender.Name = "slbGender";
             this.slbGender.Size = new System.Drawing.Size(150, 21);
@@ -208,11 +223,14 @@
             // 
             // slbLevel
             // 
+            this.slbLevel.DataSource = this.dataDataSetBindingSource1;
+            this.slbLevel.DisplayMember = "chucvu.TenChucVu";
             this.slbLevel.FormattingEnabled = true;
             this.slbLevel.Location = new System.Drawing.Point(208, 461);
             this.slbLevel.Name = "slbLevel";
             this.slbLevel.Size = new System.Drawing.Size(150, 21);
             this.slbLevel.TabIndex = 16;
+            this.slbLevel.ValueMember = "chucvu.MaChucVu";
             // 
             // btnAddEmp
             // 
@@ -223,6 +241,36 @@
             this.btnAddEmp.TabIndex = 25;
             this.btnAddEmp.Text = "Thêm";
             this.btnAddEmp.UseVisualStyleBackColor = true;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            // 
+            // dataDataSet1
+            // 
+            this.dataDataSet1.DataSetName = "dataDataSet1";
+            this.dataDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chucvuBindingSource
+            // 
+            this.chucvuBindingSource.DataMember = "chucvu";
+            this.chucvuBindingSource.DataSource = this.dataDataSet1;
+            // 
+            // chucvuTableAdapter
+            // 
+            this.chucvuTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataDataSet
+            // 
+            this.dataDataSet.DataSetName = "dataDataSet";
+            this.dataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataDataSetBindingSource
+            // 
+            this.dataDataSetBindingSource.DataSource = this.dataDataSet;
+            this.dataDataSetBindingSource.Position = 0;
+            // 
+            // dataDataSetBindingSource1
+            // 
+            this.dataDataSetBindingSource1.DataSource = this.dataDataSet;
+            this.dataDataSetBindingSource1.Position = 0;
             // 
             // AddEmployee
             // 
@@ -255,7 +303,13 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thêm nhân viên";
+            this.Load += new System.EventHandler(this.AddEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +335,12 @@
         private System.Windows.Forms.ComboBox slbGender;
         private System.Windows.Forms.ComboBox slbLevel;
         private System.Windows.Forms.Button btnAddEmp;
+        private dataDataSet1 dataDataSet1;
+        private System.Windows.Forms.BindingSource chucvuBindingSource;
+        private dataDataSet1TableAdapters.chucvuTableAdapter chucvuTableAdapter;
+        private System.Windows.Forms.BindingSource dataDataSetBindingSource1;
+        private dataDataSet dataDataSet;
+        private System.Windows.Forms.BindingSource dataDataSetBindingSource;
 
     }
 }

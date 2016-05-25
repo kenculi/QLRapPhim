@@ -58,7 +58,7 @@ namespace QuanLyRapChieuPhim.Model
         public void addEmployee(NhanVien tNhanVien)
         {
             DataSet dbDataSet;
-            string strQuery = "INSERT INTO nhanvien VALUES("+tNhanVien.employeeID+","+tNhanVien.username+","+tNhanVien.passwd+","+tNhanVien.fullname+","+tNhanVien.birthday+","+tNhanVien.address+","+tNhanVien.email+","+tNhanVien.gender+","+tNhanVien.positionID+")";
+            string strQuery = "INSERT INTO nhanvien VALUES('"+tNhanVien.username+"','"+tNhanVien.passwd+"','"+tNhanVien.fullname+"','"+tNhanVien.birthday+"','"+tNhanVien.address+"','"+tNhanVien.email+"',"+tNhanVien.gender+","+tNhanVien.positionID+")";
             dbAccess(strQuery, "nhanvien",out dbDataSet);
         }
 

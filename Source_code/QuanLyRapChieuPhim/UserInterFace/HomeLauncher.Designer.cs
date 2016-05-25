@@ -35,14 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.dtgrNVien = new System.Windows.Forms.DataGridView();
-            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maChucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataDataSet = new QuanLyRapChieuPhim.dataDataSet();
@@ -94,6 +86,28 @@
             this.phongTableAdapter = new QuanLyRapChieuPhim.dataDataSetTableAdapters.phongTableAdapter();
             this.phimTableAdapter = new QuanLyRapChieuPhim.dataDataSetTableAdapters.phimTableAdapter();
             this.lichchieuTableAdapter = new QuanLyRapChieuPhim.dataDataSetTableAdapters.lichchieuTableAdapter();
+            this.mainDataset = new QuanLyRapChieuPhim.mainDataset();
+            this.mainDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanvienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanvienTableAdapter1 = new QuanLyRapChieuPhim.mainDatasetTableAdapters.nhanvienTableAdapter();
+            this.maNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maChucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phongBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.phongTableAdapter1 = new QuanLyRapChieuPhim.mainDatasetTableAdapters.phongTableAdapter();
+            this.phongBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.phongBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.phongBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.phimBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.phimTableAdapter1 = new QuanLyRapChieuPhim.mainDatasetTableAdapters.phimTableAdapter();
+            this.lichchieuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lichchieuTableAdapter1 = new QuanLyRapChieuPhim.mainDatasetTableAdapters.lichchieuTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabNVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -117,6 +131,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabTKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatasetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phimBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichchieuBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -179,76 +202,19 @@
             this.dtgrNVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maNVDataGridViewTextBoxColumn,
             this.userNameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
             this.hoTenDataGridViewTextBoxColumn,
             this.ngaySinhDataGridViewTextBoxColumn,
             this.diaChiDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.gioiTinhDataGridViewTextBoxColumn,
             this.maChucVuDataGridViewTextBoxColumn});
-            this.dtgrNVien.DataSource = this.nhanvienBindingSource;
+            this.dtgrNVien.DataSource = this.nhanvienBindingSource1;
             this.dtgrNVien.Location = new System.Drawing.Point(-4, 85);
             this.dtgrNVien.Name = "dtgrNVien";
             this.dtgrNVien.ReadOnly = true;
             this.dtgrNVien.Size = new System.Drawing.Size(1072, 402);
             this.dtgrNVien.TabIndex = 2;
-            // 
-            // maNVDataGridViewTextBoxColumn
-            // 
-            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
-            this.maNVDataGridViewTextBoxColumn.HeaderText = "Mã NV";
-            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
-            this.maNVDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Tên đăng nhập";
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userNameDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hoTenDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diaChiDataGridViewTextBoxColumn
-            // 
-            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
-            this.diaChiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // gioiTinhDataGridViewTextBoxColumn
-            // 
-            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
-            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
-            this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // maChucVuDataGridViewTextBoxColumn
-            // 
-            this.maChucVuDataGridViewTextBoxColumn.DataPropertyName = "MaChucVu";
-            this.maChucVuDataGridViewTextBoxColumn.HeaderText = "Chức vụ";
-            this.maChucVuDataGridViewTextBoxColumn.Name = "maChucVuDataGridViewTextBoxColumn";
-            this.maChucVuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nhanvienBindingSource
             // 
@@ -313,7 +279,7 @@
             this.sLuongDayGheDataGridViewTextBoxColumn,
             this.sLuongGheMoiDayDataGridViewTextBoxColumn,
             this.ghiChuDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.phongBindingSource;
+            this.dataGridView2.DataSource = this.phongBindingSource4;
             this.dataGridView2.Location = new System.Drawing.Point(-4, 85);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -428,6 +394,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -443,9 +410,10 @@
             this.dienVienDataGridViewTextBoxColumn,
             this.moTaDataGridViewTextBoxColumn,
             this.trangThaiDataGridViewTextBoxColumn1});
-            this.dataGridView1.DataSource = this.phimBindingSource;
+            this.dataGridView1.DataSource = this.phimBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(-4, 85);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1068, 402);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -567,7 +535,7 @@
             this.maRapDataGridViewTextBoxColumn1,
             this.maPhongDataGridViewTextBoxColumn1,
             this.thoiGianChieuDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.lichchieuBindingSource;
+            this.dataGridView3.DataSource = this.lichchieuBindingSource1;
             this.dataGridView3.Location = new System.Drawing.Point(-4, 85);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(951, 402);
@@ -675,6 +643,130 @@
             // 
             this.lichchieuTableAdapter.ClearBeforeFill = true;
             // 
+            // mainDataset
+            // 
+            this.mainDataset.DataSetName = "mainDataset";
+            this.mainDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mainDatasetBindingSource
+            // 
+            this.mainDatasetBindingSource.DataSource = this.mainDataset;
+            this.mainDatasetBindingSource.Position = 0;
+            // 
+            // nhanvienBindingSource1
+            // 
+            this.nhanvienBindingSource1.DataMember = "nhanvien";
+            this.nhanvienBindingSource1.DataSource = this.mainDatasetBindingSource;
+            // 
+            // nhanvienTableAdapter1
+            // 
+            this.nhanvienTableAdapter1.ClearBeforeFill = true;
+            // 
+            // maNVDataGridViewTextBoxColumn
+            // 
+            this.maNVDataGridViewTextBoxColumn.DataPropertyName = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.HeaderText = "MaNV";
+            this.maNVDataGridViewTextBoxColumn.Name = "maNVDataGridViewTextBoxColumn";
+            this.maNVDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            this.diaChiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maChucVuDataGridViewTextBoxColumn
+            // 
+            this.maChucVuDataGridViewTextBoxColumn.DataPropertyName = "MaChucVu";
+            this.maChucVuDataGridViewTextBoxColumn.HeaderText = "MaChucVu";
+            this.maChucVuDataGridViewTextBoxColumn.Name = "maChucVuDataGridViewTextBoxColumn";
+            this.maChucVuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phongBindingSource1
+            // 
+            this.phongBindingSource1.DataMember = "phong";
+            this.phongBindingSource1.DataSource = this.mainDatasetBindingSource;
+            // 
+            // phongTableAdapter1
+            // 
+            this.phongTableAdapter1.ClearBeforeFill = true;
+            // 
+            // phongBindingSource2
+            // 
+            this.phongBindingSource2.DataMember = "phong";
+            this.phongBindingSource2.DataSource = this.mainDatasetBindingSource;
+            // 
+            // phongBindingSource3
+            // 
+            this.phongBindingSource3.DataMember = "phong";
+            this.phongBindingSource3.DataSource = this.mainDataset;
+            // 
+            // phongBindingSource4
+            // 
+            this.phongBindingSource4.DataMember = "phong";
+            this.phongBindingSource4.DataSource = this.mainDataset;
+            // 
+            // phimBindingSource1
+            // 
+            this.phimBindingSource1.DataMember = "phim";
+            this.phimBindingSource1.DataSource = this.mainDatasetBindingSource;
+            // 
+            // phimTableAdapter1
+            // 
+            this.phimTableAdapter1.ClearBeforeFill = true;
+            // 
+            // lichchieuBindingSource1
+            // 
+            this.lichchieuBindingSource1.DataMember = "lichchieu";
+            this.lichchieuBindingSource1.DataSource = this.mainDatasetBindingSource;
+            // 
+            // lichchieuTableAdapter1
+            // 
+            this.lichchieuTableAdapter1.ClearBeforeFill = true;
+            // 
             // CHomeLauncher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,6 +808,15 @@
             this.tabTKe.ResumeLayout(false);
             this.tabTKe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatasetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phimBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichchieuBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -757,14 +858,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maRapDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPhongDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiGianChieuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maChucVuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPhongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenPhongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
@@ -786,5 +879,27 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.BindingSource mainDatasetBindingSource;
+        private mainDataset mainDataset;
+        private System.Windows.Forms.BindingSource nhanvienBindingSource1;
+        private mainDatasetTableAdapters.nhanvienTableAdapter nhanvienTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maChucVuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource phongBindingSource1;
+        private mainDatasetTableAdapters.phongTableAdapter phongTableAdapter1;
+        private System.Windows.Forms.BindingSource phongBindingSource4;
+        private System.Windows.Forms.BindingSource phongBindingSource2;
+        private System.Windows.Forms.BindingSource phongBindingSource3;
+        private System.Windows.Forms.BindingSource phimBindingSource1;
+        private mainDatasetTableAdapters.phimTableAdapter phimTableAdapter1;
+        private System.Windows.Forms.BindingSource lichchieuBindingSource1;
+        private mainDatasetTableAdapters.lichchieuTableAdapter lichchieuTableAdapter1;
 	}
 }
