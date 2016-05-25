@@ -64,7 +64,6 @@
     <Compile Include="Model\dbEmployee.cs" />
     <Compile Include="Model\dbMovie.cs" />
     <Compile Include="Model\dbQuery.cs" />
-<<<<<<< HEAD
     <Compile Include="UserInterFace\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,9 +82,7 @@
     <Compile Include="UserInterFace\AddGenreMovie.Designer.cs">
       <DependentUpon>AddGenreMovie.cs</DependentUpon>
     </Compile>
-=======
     <Compile Include="Model\dbShowTime.cs" />
->>>>>>> 4192db9b53b05db051a3681bdc0290e30cfac5c0
     <Compile Include="UserInterFace\HomeLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
