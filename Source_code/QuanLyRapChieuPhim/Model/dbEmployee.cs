@@ -109,14 +109,43 @@ namespace QuanLyRapChieuPhim.Model
             }
         }
 
+        public void getEmployee(string condition, out NhanVien[] tNhanVien)
+        {
+            /* Tạo câu truy vấn */
+            string strQuery = "Select * from nhanvien" + condition;
+
+            /* Tạo data lưu thông tin sau khi truy vấn */
+            DataSet dbDataSet;
+
+            /* Thực hiện truy vấn */
+            dbAccess(strQuery, "nhanvien", out dbDataSet);
+
+            /* Xử lý thông tin lấy từ database */
+            tNhanVien = new NhanVien[100];
+            int i = 0;
+            DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
+            foreach (DataRow dr in dra)
+            {
+                tNhanVien[i].employeeID = (int)dr[0];
+                tNhanVien[i].username = (string)dr[1];
+                tNhanVien[i].passwd = (string)dr[2];
+                tNhanVien[i].fullname = (string)dr[3];
+                tNhanVien[i].birthday = (DateTime)dr[4];
+                tNhanVien[i].address = (string)dr[5];
+                tNhanVien[i].email = (string)dr[6];
+                tNhanVien[i].gender = (int)dr[7];
+                tNhanVien[i].positionID = (int)dr[8];//cột 9 là cột ma~ chức vụ sau khi kết bảng
+                i++;
+            }
+        }
+
         public void checkUserLogin(string strUserName, string strPasswordHash, out int nError, out int nAccessRight)
         {
             nError = (int)eLOGIN_ERROR.eERROR_NOK;
             nAccessRight = (int)eACESS_RIGHT.eACESS_DENIED;
             NhanVien[] tNhanVien;
-            int i = 0;
-            string condition = "";
-            this.getallEmployee(condition, out tNhanVien, i);
+            string condition = "where UserName = '" + strUserName + "'";
+            this.getEmployee(condition, out tNhanVien);
             string passInDB = tNhanVien[0].passwd;
             if (passInDB == strPasswordHash)
             {
