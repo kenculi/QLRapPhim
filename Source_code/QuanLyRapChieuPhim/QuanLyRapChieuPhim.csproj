@@ -49,9 +49,12 @@
     <Compile Include="Controller\dbController.cs" />
     <Compile Include="Controller\loginController.cs" />
     <Compile Include="Define\Define.cs" />
+    <Compile Include="Model\CinemaRoom.cs" />
     <Compile Include="Model\CommonData.cs" />
     <Compile Include="Model\dbEmployee.cs" />
+    <Compile Include="Model\dbMovie.cs" />
     <Compile Include="Model\dbQuery.cs" />
+    <Compile Include="Model\dbShowTime.cs" />
     <Compile Include="UserInterFace\HomeLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
