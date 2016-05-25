@@ -42,81 +42,46 @@ namespace QuanLyRapChieuPhim.Model
 
         /* ==========================================================
          *	Function name: 
-         *		getEmployeeName
+         *		addEmployee
          *	Description:
-         *		Lấy thông tin tên nhân viên
+         *		Thêm thông tin một nhân viên
          *	Parameter:
          *		[Input]
-         *			string strID: Mã nhân viên
-         *		[Output]
-         *			string strName: Tên nhân viên
-         *	Note:
-         *		None.
-         *	History:
-         *		2016/05/21	SonDTT		Khởi tạo
-         * ========================================================== */
-        public void getEmployeeName(string strID, out string strName)
-        {
-            /* Tạo câu truy vấn */
-            string strQuery = "Select * from nhanvien nv where nv.MaNV = " + strID;
-            //string strQuery = "Select * from NhanVien";
-
-            /* Tạo data lưu thông tin sau khi truy vấn */
-            DataSet dbDataSet = new DataSet();
-
-            /* Thực hiện truy vấn */
-            dbAccess(strQuery, "nhanvien", out dbDataSet);
-
-            /* Xử lý thông tin lấy từ database */
-            /* Lấy thông tin tên của nhân viên */
-            //DataColumnCollection drc = dbDataSet.Tables["NhanVien"].Columns;
-            //int i = 0;
-
-            DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
-            DataRow dr = dra[0]; /* 0 là hàng thứ nhất */
-            strName = (string)dr[0]; /* Tên nhân viên là cột thứ 5 */
-        }
-
-        /* ==========================================================
-         *	Function name: 
-         *		setEmployeeName
-         *	Description:
-         *		Sửa thông tin tên nhân viên
-         *	Parameter:
-         *		[Input]
-         *			string strID: Mã nhân viên
-         *			string strName: Tên nhân viên
+         *		    NhanVien tNhanVien
          *		[Output]
          *			None.
          *	Note:
          *		None.
          *	History:
-         *		2016/05/21	SonDTT		Khởi tạo
+         *		2016/05/21	[canh]		Khởi tạo
          * ========================================================== */
-        public void setEmployeeName(string strID, string strName)
+        public void addEmployee(NhanVien tNhanVien)
         {
-            strName = null;
+            DataSet dbDataSet;
+            string strQuery = "INSERT INTO nhanvien VALUES("+tNhanVien.employeeID+","+tNhanVien.username+","+tNhanVien.passwd+","+tNhanVien.fullname+","+tNhanVien.birthday+","+tNhanVien.address+","+tNhanVien.email+","+tNhanVien.gender+","+tNhanVien.positionID+")";
+            dbAccess(strQuery, "nhanvien",out dbDataSet);
         }
 
         /* ==========================================================
          *	Function name: 
-         *		getEmployee
+         *		getallEmployee
          *	Description:
-         *		Lấy toàn bộ thông tin tên nhân viên
+         *		Lấy toàn bộ thông tin nhân viên
          *	Parameter:
          *		[Input]
-         *			None.
+         *			string condition : Mệnh đề where
          *		[Output]
-         *			NhanVien[] NhanVien_t: Thông tin toàn bộ nhân viên
+         *			NhanVien[] tNhanVien: Thông tin toàn bộ nhân viên
+         *			i : Số lượng nhân viên
          *	Note:
          *		None.
          *	History:
          *		2016/05/21	SonDTT		Khởi tạo
          * ========================================================== */
-        public void getEmployee(string condition, out NhanVien[] tNhanVien)
+        public void getallEmployee(string condition, out NhanVien[] tNhanVien, int i)
         {
             /* Tạo câu truy vấn */
-            string strQuery = "Select * from nhanvien " + condition;
+            string strQuery = "Select * from nhanvien l,chucvu c where l.MaChucVu = c.MaChucVu" + condition;
 
             /* Tạo data lưu thông tin sau khi truy vấn */
             DataSet dbDataSet;
@@ -126,7 +91,7 @@ namespace QuanLyRapChieuPhim.Model
 
             /* Xử lý thông tin lấy từ database */
             tNhanVien = new NhanVien[100];
-            int i = 0;
+            i = 0;
             DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
             foreach (DataRow dr in dra)
             {
@@ -138,7 +103,8 @@ namespace QuanLyRapChieuPhim.Model
                 tNhanVien[i].address = (string)dr[5];
                 tNhanVien[i].email = (string)dr[6];
                 tNhanVien[i].gender = (int)dr[7];
-				tNhanVien[i].positionID = (int)dr[8];
+                tNhanVien[i].positionID = (int)dr[8];//cột 9 là cột ma~ chức vụ sau khi kết bảng
+                tNhanVien[i].position = (string)dr[10];//cột 11 là cột chức vụ sau khi kết bảng
                 i++;
             }
         }
@@ -148,8 +114,9 @@ namespace QuanLyRapChieuPhim.Model
             nError = (int)eLOGIN_ERROR.eERROR_NOK;
             nAccessRight = (int)eACESS_RIGHT.eACESS_DENIED;
             NhanVien[] tNhanVien;
+            int i = 0;
             string condition = "";
-            this.getEmployee(condition, out tNhanVien);
+            this.getallEmployee(condition, out tNhanVien, i);
             string passInDB = tNhanVien[0].passwd;
             if (passInDB == strPasswordHash)
             {
