@@ -42,77 +42,94 @@ namespace QuanLyRapChieuPhim.Model
 
         /* ==========================================================
          *	Function name: 
-         *		getEmployeeName
+         *		addEmployee
          *	Description:
-         *		Lấy thông tin tên nhân viên
+         *		Thêm thông tin một nhân viên
          *	Parameter:
          *		[Input]
-         *			string strID: Mã nhân viên
+         *		    NhanVien tNhanVien
          *		[Output]
-         *			string strName: Tên nhân viên
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void addEmployee(NhanVien tNhanVien)
+        {
+            DataSet dbDataSet;
+            string strQuery = "INSERT INTO nhanvien VALUES("+tNhanVien.employeeID+","+tNhanVien.username+","+tNhanVien.passwd+","+tNhanVien.fullname+","+tNhanVien.birthday+","+tNhanVien.address+","+tNhanVien.email+","+tNhanVien.gender+","+tNhanVien.positionID+")";
+            dbAccess(strQuery, "nhanvien",out dbDataSet);
+        }
+
+        /* ==========================================================
+         *	Function name: 
+         *		updateEmployee
+         *	Description:
+         *		Sửa thông tin một nhân viên
+         *	Parameter:
+         *		[Input]
+         *		    NhanVien tNhanVien
+         *		[Output]
+         *			None.
+         *	Note:
+         *		None.
+         *	History:
+         *		2016/05/21	[canh]		Khởi tạo
+         * ========================================================== */
+        public void updateEmployee(NhanVien tNhanVien)
+        {
+            DataSet dbDataSet;
+            string strQuery = "UPDATE nhanvien SET MaNV=" + tNhanVien.employeeID + ",UserName=" + tNhanVien.username + ",Password=" + tNhanVien.passwd + ",HoTen=" + tNhanVien.fullname + ",NgaySinh=" + tNhanVien.birthday + ",DiaChi=" + tNhanVien.address + ",Email=" + tNhanVien.email + ",GioiTinh=" + tNhanVien.gender + ",MaChucVu=" + tNhanVien.positionID +" WHERE MaNV = "+tNhanVien.employeeID;
+            dbAccess(strQuery, "nhanvien", out dbDataSet);
+        }
+        /* ==========================================================
+         *	Function name: 
+         *		getallEmployee
+         *	Description:
+         *		Lấy toàn bộ thông tin nhân viên
+         *	Parameter:
+         *		[Input]
+         *			string condition : Mệnh đề where
+         *		[Output]
+         *			NhanVien[] tNhanVien: Thông tin toàn bộ nhân viên
+         *			i : Số lượng nhân viên
          *	Note:
          *		None.
          *	History:
          *		2016/05/21	SonDTT		Khởi tạo
          * ========================================================== */
-        public void getEmployeeName(string strID, out string strName)
+        public void getallEmployee(string condition, out NhanVien[] tNhanVien, int i)
         {
             /* Tạo câu truy vấn */
-            string strQuery = "Select * from nhanvien nv where nv.MaNV = " + strID;
-            //string strQuery = "Select * from NhanVien";
+            string strQuery = "Select * from nhanvien l,chucvu c where l.MaChucVu = c.MaChucVu" + condition;
 
             /* Tạo data lưu thông tin sau khi truy vấn */
-            DataSet dbDataSet = new DataSet();
+            DataSet dbDataSet;
 
             /* Thực hiện truy vấn */
             dbAccess(strQuery, "nhanvien", out dbDataSet);
 
             /* Xử lý thông tin lấy từ database */
-            /* Lấy thông tin tên của nhân viên */
-            //DataColumnCollection drc = dbDataSet.Tables["NhanVien"].Columns;
-            //int i = 0;
-
+            tNhanVien = new NhanVien[100];
+            i = 0;
             DataRowCollection dra = dbDataSet.Tables["nhanvien"].Rows;
-            DataRow dr = dra[0]; /* 0 là hàng thứ nhất */
-            strName = (string)dr[0]; /* Tên nhân viên là cột thứ 5 */
+            foreach (DataRow dr in dra)
+            {
+                tNhanVien[i].employeeID = (int)dr[0];
+                tNhanVien[i].username = (string)dr[1];
+                tNhanVien[i].passwd = (string)dr[2];
+                tNhanVien[i].fullname = (string)dr[3];
+				tNhanVien[i].birthday = (DateTime)dr[4];
+                tNhanVien[i].address = (string)dr[5];
+                tNhanVien[i].email = (string)dr[6];
+                tNhanVien[i].gender = (int)dr[7];
+                tNhanVien[i].positionID = (int)dr[8];//cột 9 là cột ma~ chức vụ sau khi kết bảng
+                tNhanVien[i].position = (string)dr[10];//cột 11 là cột chức vụ sau khi kết bảng
+                i++;
+            }
         }
 
-        /* ==========================================================
-         *	Function name: 
-         *		setEmployeeName
-         *	Description:
-         *		Sửa thông tin tên nhân viên
-         *	Parameter:
-         *		[Input]
-         *			string strID: Mã nhân viên
-         *			string strName: Tên nhân viên
-         *		[Output]
-         *			None.
-         *	Note:
-         *		None.
-         *	History:
-         *		2016/05/21	SonDTT		Khởi tạo
-         * ========================================================== */
-        public void setEmployeeName(string strID, string strName)
-        {
-            strName = null;
-        }
-
-        /* ==========================================================
-         *	Function name: 
-         *		getEmployee
-         *	Description:
-         *		Lấy toàn bộ thông tin tên nhân viên
-         *	Parameter:
-         *		[Input]
-         *			None.
-         *		[Output]
-         *			NhanVien[] NhanVien_t: Thông tin toàn bộ nhân viên
-         *	Note:
-         *		None.
-         *	History:
-         *		2016/05/21	SonDTT		Khởi tạo
-         * ========================================================== */
         public void getEmployee(string condition, out NhanVien[] tNhanVien)
         {
             /* Tạo câu truy vấn */
@@ -134,11 +151,11 @@ namespace QuanLyRapChieuPhim.Model
                 tNhanVien[i].username = (string)dr[1];
                 tNhanVien[i].passwd = (string)dr[2];
                 tNhanVien[i].fullname = (string)dr[3];
-				tNhanVien[i].birthday = (DateTime)dr[4];
+                tNhanVien[i].birthday = (DateTime)dr[4];
                 tNhanVien[i].address = (string)dr[5];
                 tNhanVien[i].email = (string)dr[6];
                 tNhanVien[i].gender = (int)dr[7];
-				tNhanVien[i].positionID = (int)dr[8];
+                tNhanVien[i].positionID = (int)dr[8];//cột 9 là cột ma~ chức vụ sau khi kết bảng
                 i++;
             }
         }
