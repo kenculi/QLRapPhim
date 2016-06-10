@@ -47,19 +47,23 @@
             this.slbBirthday = new System.Windows.Forms.DateTimePicker();
             this.slbGender = new System.Windows.Forms.ComboBox();
             this.slbLevel = new System.Windows.Forms.ComboBox();
+            this.dataDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataDataSet = new QuanLyRapChieuPhim.dataDataSet();
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.dataDataSet1 = new QuanLyRapChieuPhim.dataDataSet1();
             this.chucvuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chucvuTableAdapter = new QuanLyRapChieuPhim.dataDataSet1TableAdapters.chucvuTableAdapter();
-            this.dataDataSet = new QuanLyRapChieuPhim.dataDataSet();
             this.dataDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mainDataset = new QuanLyRapChieuPhim.mainDataset();
+            this.mainDatasetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatasetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -223,14 +227,24 @@
             // 
             // slbLevel
             // 
-            this.slbLevel.DataSource = this.dataDataSetBindingSource1;
-            this.slbLevel.DisplayMember = "chucvu.TenChucVu";
+            this.slbLevel.DataSource = this.chucvuBindingSource;
+            this.slbLevel.DisplayMember = "TenChucVu";
             this.slbLevel.FormattingEnabled = true;
             this.slbLevel.Location = new System.Drawing.Point(208, 461);
             this.slbLevel.Name = "slbLevel";
             this.slbLevel.Size = new System.Drawing.Size(150, 21);
             this.slbLevel.TabIndex = 16;
-            this.slbLevel.ValueMember = "chucvu.MaChucVu";
+            this.slbLevel.ValueMember = "MaChucVu";
+            // 
+            // dataDataSetBindingSource1
+            // 
+            this.dataDataSetBindingSource1.DataSource = this.dataDataSet;
+            this.dataDataSetBindingSource1.Position = 0;
+            // 
+            // dataDataSet
+            // 
+            this.dataDataSet.DataSetName = "dataDataSet";
+            this.dataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnAddEmp
             // 
@@ -257,20 +271,20 @@
             // 
             this.chucvuTableAdapter.ClearBeforeFill = true;
             // 
-            // dataDataSet
-            // 
-            this.dataDataSet.DataSetName = "dataDataSet";
-            this.dataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataDataSetBindingSource
             // 
             this.dataDataSetBindingSource.DataSource = this.dataDataSet;
             this.dataDataSetBindingSource.Position = 0;
             // 
-            // dataDataSetBindingSource1
+            // mainDataset
             // 
-            this.dataDataSetBindingSource1.DataSource = this.dataDataSet;
-            this.dataDataSetBindingSource1.Position = 0;
+            this.mainDataset.DataSetName = "mainDataset";
+            this.mainDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mainDatasetBindingSource
+            // 
+            this.mainDatasetBindingSource.DataSource = this.mainDataset;
+            this.mainDatasetBindingSource.Position = 0;
             // 
             // AddEmployee
             // 
@@ -305,11 +319,13 @@
             this.Text = "Thêm nhân viên";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainDatasetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +357,8 @@
         private System.Windows.Forms.BindingSource dataDataSetBindingSource1;
         private dataDataSet dataDataSet;
         private System.Windows.Forms.BindingSource dataDataSetBindingSource;
+        private mainDataset mainDataset;
+        private System.Windows.Forms.BindingSource mainDatasetBindingSource;
 
     }
 }

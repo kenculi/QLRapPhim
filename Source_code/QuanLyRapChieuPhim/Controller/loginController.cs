@@ -91,7 +91,7 @@ namespace QuanLyRapChieuPhim.Controller
          *	History:
          *		2016/05/23	SonDTT		Khởi tạo
          * ========================================================== */
-        string GetMd5Hash(MD5 md5Hash, string input)
+        public string GetMd5Hash(MD5 md5Hash, string input)
         {
 
             // Convert the input string to a byte array and compute the hash.

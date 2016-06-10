@@ -55,11 +55,10 @@ namespace QuanLyRapChieuPhim.Model
          *	History:
          *		2016/05/21	[canh]		Khởi tạo
          * ========================================================== */
-        public void addEmployee(NhanVien tNhanVien)
+        public void addEmployee(NhanVien tNhanVien, out string strQuery)
         {
-            DataSet dbDataSet;
-            string strQuery = "INSERT INTO nhanvien VALUES('"+tNhanVien.username+"','"+tNhanVien.passwd+"','"+tNhanVien.fullname+"','"+tNhanVien.birthday+"','"+tNhanVien.address+"','"+tNhanVien.email+"',"+tNhanVien.gender+","+tNhanVien.positionID+")";
-            dbAccess(strQuery, "nhanvien",out dbDataSet);
+            strQuery = "INSERT INTO nhanvien (UserName, Password, Hoten, DiaChi, Email, GioiTinh, MaChucVu) VALUES ('" + tNhanVien.username + "','" + tNhanVien.passwd + "','" + tNhanVien.fullname + "','" + tNhanVien.address + "','" + tNhanVien.email + "','" + tNhanVien.gender + "','" + tNhanVien.positionID + "')";
+            dbInsert(strQuery, tNhanVien);
         }
 
         /* ==========================================================

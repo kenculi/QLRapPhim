@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
-        6wAACusBgosNWgAAACt0RVh0Q3JlYXRpb24gVGltZQBEbyAxNCBOb3YgMjAwMiAxNjo0MzowNiArMDEw
+        6gAACuoBUMzvvgAAACt0RVh0Q3JlYXRpb24gVGltZQBEbyAxNCBOb3YgMjAwMiAxNjo0MzowNiArMDEw
         MNsFUO0AAAAHdElNRQfTCgYUFzAP0DzKAAAQMElEQVRoQ71aCVxN+ft+b4vSTgvSqCihDRn7lrEbWzOW
         IaWEGDN2kb1kzS5LpWEQapJKRbJLshSN3TBjGYaZMbYxfuZfz/99z7nX8PuNmfjgfj7v59x77j3nPM/7
         Pu/zXYroLb+2T6J6W8MoIjmcNiVPps1bwil6/VgKSZ1BszMiKC1jJp3YPp3OfRNOhYnjKXXlcAoL6Ugu
@@ -194,8 +194,17 @@
         svUilifEZK/fmUP+D0IXck6+kyWj/FaukWvlHmUC/f+r4121lhjm9QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="chucvuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>142, 17</value>
+  </metadata>
+  <metadata name="dataDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="dataDataSetBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>789, 17</value>
+  </metadata>
+  <metadata name="dataDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 17</value>
   </metadata>
   <metadata name="dataDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>474, 17</value>
@@ -203,14 +212,17 @@
   <metadata name="dataDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="chucvuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>142, 17</value>
-  </metadata>
   <metadata name="chucvuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>311, 17</value>
   </metadata>
   <metadata name="dataDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>592, 17</value>
+  </metadata>
+  <metadata name="mainDataset.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>993, 17</value>
+  </metadata>
+  <metadata name="mainDatasetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

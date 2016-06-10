@@ -107,5 +107,31 @@ namespace QuanLyRapChieuPhim.Model
 			/* Đóng database */
 			dbAccessConn.Close();
 		}
+
+        protected void dbInsert(string strQuery, NhanVien nhanvien)
+        {
+            /* Mở database */
+            dbAccessConn.Open();
+            OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
+            OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
+
+            //OleDbCommand cmd = new OleDbCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = strQuery;
+            ////cmd.CommandText = "INSERT INTO nhanvien (UserName, Password, Hoten, NgaySinh, DiaChi, Email, GioiTinh, MaChucVu) VALUES (@UserName,@Password,@Hoten,@NgaySinh,@DiaChi,@Email,@GioiTinh,@MaChucVu)";
+            ////cmd.Parameters.AddWithValue("@Username", nhanvien.username);
+            ////cmd.Parameters.AddWithValue("@Password", nhanvien.passwd);
+            ////cmd.Parameters.AddWithValue("@Hoten", nhanvien.fullname);
+            ////cmd.Parameters.AddWithValue("@NgaySinh", nhanvien.birthday);
+            ////cmd.Parameters.AddWithValue("@DiaChi", nhanvien.address);
+            ////cmd.Parameters.AddWithValue("@Email", nhanvien.email);
+            ////cmd.Parameters.AddWithValue("@GioiTinh", nhanvien.gender);
+            ////cmd.Parameters.AddWithValue("@MaChucVu", nhanvien.positionID);
+            //cmd.Connection = dbAccessConn;
+            ////dbAccessConn.Open();
+            //cmd.ExecuteNonQuery();
+            /* Đóng database */
+            dbAccessConn.Close();
+        }
 	}
 }
