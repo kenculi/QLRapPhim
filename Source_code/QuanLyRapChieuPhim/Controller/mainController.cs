@@ -18,7 +18,6 @@ namespace QuanLyRapChieuPhim
 	 * ========================================================== */
 	class CMainController
 	{
-		private CHomeLauncher frmHomeLauncher;
 		private CUserAuthentication frmUserAuthentication;
 
 		/* ==========================================================
@@ -38,7 +37,6 @@ namespace QuanLyRapChieuPhim
 		 * ========================================================== */
 		public CMainController()
 		{
-			frmHomeLauncher = new CHomeLauncher();
 			frmUserAuthentication = new CUserAuthentication();
 		}
 
@@ -61,18 +59,6 @@ namespace QuanLyRapChieuPhim
 		{
 			/* Hiển thị màn hình đăng nhập */
 			frmUserAuthentication.ShowDialog();
-
-			while (true)
-			{
-				/* Khi màn hình đăng nhập đóng thì hiển thị màn hình chính */
-				if (frmUserAuthentication.Visible == false)
-				{
-					break;
-				}
-			}
-
-			/* Hiển thị màn hình chính */
-			frmHomeLauncher.ShowDialog();
 		}
 	}
 }

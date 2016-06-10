@@ -92,26 +92,46 @@ namespace QuanLyRapChieuPhim.Model
 		protected void dbAccess(string strQuery, string strTableName, out DataSet dbDataSet)
 		{
 			/* Initial */
-			dbDataSet = null;
+			dbDataSet = new DataSet();
 
 			/* Create the dataset and add the Categories table to it: */
-			try
-			{
-				OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
-				OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
+			OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
+			OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
 
-				dbAccessConn.Open();
-				dbDataAdapter.Fill(dbDataSet, strTableName);
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Error: Failed to retrieve the required data from the DataBase.\n{0}", ex.Message);
-				return;
-			}
-			finally
-			{
-				dbAccessConn.Close();
-			}
+			/* Mở database */
+			dbAccessConn.Open();
+
+			/* Lấy thông tin */
+			dbDataAdapter.Fill(dbDataSet, strTableName);
+
+			/* Đóng database */
+			dbAccessConn.Close();
 		}
+
+        protected void dbInsert(string strQuery, NhanVien nhanvien)
+        {
+            /* Mở database */
+            dbAccessConn.Open();
+            OleDbCommand dbAccessCommand = new OleDbCommand(strQuery, dbAccessConn);
+            OleDbDataAdapter dbDataAdapter = new OleDbDataAdapter(dbAccessCommand);
+
+            //OleDbCommand cmd = new OleDbCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = strQuery;
+            ////cmd.CommandText = "INSERT INTO nhanvien (UserName, Password, Hoten, NgaySinh, DiaChi, Email, GioiTinh, MaChucVu) VALUES (@UserName,@Password,@Hoten,@NgaySinh,@DiaChi,@Email,@GioiTinh,@MaChucVu)";
+            ////cmd.Parameters.AddWithValue("@Username", nhanvien.username);
+            ////cmd.Parameters.AddWithValue("@Password", nhanvien.passwd);
+            ////cmd.Parameters.AddWithValue("@Hoten", nhanvien.fullname);
+            ////cmd.Parameters.AddWithValue("@NgaySinh", nhanvien.birthday);
+            ////cmd.Parameters.AddWithValue("@DiaChi", nhanvien.address);
+            ////cmd.Parameters.AddWithValue("@Email", nhanvien.email);
+            ////cmd.Parameters.AddWithValue("@GioiTinh", nhanvien.gender);
+            ////cmd.Parameters.AddWithValue("@MaChucVu", nhanvien.positionID);
+            //cmd.Connection = dbAccessConn;
+            ////dbAccessConn.Open();
+            //cmd.ExecuteNonQuery();
+            /* Đóng database */
+            dbAccessConn.Close();
+        }
 	}
 }
